@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atharva's Api</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="chat-container">
+      <div class="chat-header">
+        <div class="title-block">
+          <p class="eyebrow">Atharva's chatbot</p>
+          <h1>Chat</h1>
+        </div>
+        <div class="header-badge" id="headerBadge">
+          <span class="status-dot"></span>
+          Groq Live
+        </div>
+      </div>
+
+      <div class="chat-toolbar">
+        <div class="toolbar-group">
+          <button class="toolbar-button is-active" type="button">Realtime UI</button>
+          <button class="toolbar-button" type="button">Responsive Mode</button>
+        </div>
+        <button class="toolbar-button toolbar-clear" id="clearChatBtn" type="button">
+          Clear chat
+        </button>
+      </div>
+
+      <section class="welcome-panel" id="welcomePanel">
+        <div class="welcome-copy">
+          <p class="welcome-kicker">Interactive Workspace</p>
+          <h2>Ask faster, keep context, and make the chat feel alive.</h2>
+          <p>
+            Tap a quick prompt, type your own question, or build a multi-turn conversation.
+          </p>
+        </div>
+        <div class="prompt-grid" id="promptGrid">
+          <button class="prompt-chip" type="button" data-prompt="Summarize today's tasks in three bullets.">
+            Summarize today's tasks
+          </button>
+          <button class="prompt-chip" type="button" data-prompt="Rewrite this in a clearer and more confident tone.">
+            Rewrite with better tone
+          </button>
+          <button class="prompt-chip" type="button" data-prompt="Give me a step-by-step plan to finish this project.">
+            Build a project plan
+          </button>
+          <button class="prompt-chip" type="button" data-prompt="Turn this idea into a short professional message.">
+            Draft a professional message
+          </button>
+        </div>
+      </section>
+
+      <div class="chat-box" id="chatBox"></div>
+
+      <div class="chat-input">
+        <button class="input-addon" id="suggestionBtn" type="button" aria-label="Insert a prompt idea">
+          +
+        </button>
+        <textarea
+          id="userInput"
+          rows="1"
+          placeholder="Type a message... Press Enter to send, Shift+Enter for a new line."
+        ></textarea>
+        <button class="send-button" id="sendButton" onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
